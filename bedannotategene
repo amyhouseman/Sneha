@@ -1,0 +1,11 @@
+#Using your bed file add the genes:
+
+BedAnnotateGenes -in $ORIGINAL_BED -out "GeneAnnotated."bedfile.bed -ref $REFERENCE_HG38
+
+#Using BedCoverage, use the bam file, then the bed file with Genes annotated, and then an output file
+
+BedCoverage -bam $BAM_INPUTS -in $BED_INPUT -out $COV_OUTPUT
+
+Once you have all your coverage files for each sample, you can add them to the same table in R using: 
+
+
